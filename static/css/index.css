@@ -155,3 +155,9 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.scrollable-content {
+  max-height: 200px; /* Set the desired fixed height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 10px; /* Optional: Add padding for better readability */
+}
