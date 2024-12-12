@@ -127,6 +127,18 @@ body {
   margin: 0;
 }
 
+.results-carousel2 {
+  overflow: hidden;
+}
+
+.results-carousel2 .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
 
 .interpolation-panel {
   background: #f5f5f5;
@@ -160,4 +172,8 @@ body {
   max-height: 200px; /* Set the desired fixed height */
   overflow-y: scroll; /* Enable vertical scrolling */
   padding: 10px; /* Optional: Add padding for better readability */
+}
+
+.carousel-image {
+  width: 100%; /* Ensure the image takes the full width of the container */
 }

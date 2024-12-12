@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation">
+    content="Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation">
   <meta name="keywords" content="Embodied AI, Mobile Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation</title>
+  <title>Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation
+  </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -22,15 +24,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
@@ -42,77 +42,81 @@
 
   <style>
     .tab-pane {
-        display: none;
+      display: none;
     }
 
     .tab-pane.active {
-        display: block;
+      display: block;
     }
+  </style>
 
-</style>
+  <script>
+    $(document).ready(function () {
+      $(".tabs ul li a").click(function (e) {
+        e.preventDefault();
 
-<script>
-    $(document).ready(function() {
-        $(".tabs ul li a").click(function(e) {
-            e.preventDefault();
+        // Get the target tab
+        var targetTab = $(this).attr("href");
 
-            // Get the target tab
-            var targetTab = $(this).attr("href");
+        // Remove 'is-active' class from all tab-items
+        $(".tabs ul li").removeClass("is-active");
 
-            // Remove 'is-active' class from all tab-items
-            $(".tabs ul li").removeClass("is-active");
+        // Add 'is-active' class to current tab-item
+        $(this).parent().addClass("is-active");
 
-            // Add 'is-active' class to current tab-item
-            $(this).parent().addClass("is-active");
+        // Hide all tab content
+        $(".tab-content .tab-pane").removeClass("active");
 
-            // Hide all tab content
-            $(".tab-content .tab-pane").removeClass("active");
-
-            // Show the target tab content
-            $(targetTab).addClass("active");
-        });
+        // Show the target tab content
+        $(targetTab).addClass("active");
+      });
     });
 
-</script>
+  </script>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://orcid.org/0000-0002-7492-632X">Fangyuan Wang</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              <a href="https://">Shipeng Lyu</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              <a href="https://orcid.org/0000-0002-7020-0943">Peng Zhou</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://orcid.org/0000-0002-9666-018X">Anqing Duan</a><sup>4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://orcid.org/0000-0001-9583-0055">Guodong Guo</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://orcid.org/0000-0002-3426-6638">David Navarro-Alarcon</a><sup>1</sup>,
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Department of Mechanical Engineering, The Hong Kong Polytechnic University</span></br>
-            <span class="author-block"><sup>2</sup>Ningbo Institute of Digital Twin, Eastern Institute of Technology</span>
-            <span class="author-block"><sup>3</sup>School of Advanced Engineering, Great Bay University</span>
-            <span class="author-block"><sup>4</sup>Robotics Department, Mohamed Bin Zayed University of Artificial Intelligence</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
+            <h1 class="title is-1 publication-title">Instruction-Augmented Long-Horizon Planning: Embedding Grounding
+              Mechanisms in Embodied Mobile Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://orcid.org/0000-0002-7492-632X">Fangyuan Wang</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://">Shipeng Lyu</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://orcid.org/0000-0002-7020-0943">Peng Zhou</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://orcid.org/0000-0002-9666-018X">Anqing Duan</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://orcid.org/0000-0001-9583-0055">Guodong Guo</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://orcid.org/0000-0002-3426-6638">David Navarro-Alarcon</a><sup>1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Department of Mechanical Engineering, The Hong Kong Polytechnic
+                University</span></br>
+              <span class="author-block"><sup>2</sup>Ningbo Institute of Digital Twin, Eastern Institute of
+                Technology</span>
+              <span class="author-block"><sup>3</sup>School of Advanced Engineering, Great Bay University</span>
+              <span class="author-block"><sup>4</sup>Robotics Department, Mohamed Bin Zayed University of Artificial
+                Intelligence</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -121,40 +125,34 @@
                   <span>Paper</span>
                 </a>
               </span> -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark"
-                   title="Arxiv will come soon">
-                  <span class="icon">
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Arxiv will come soon">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark"
-                   title="Video will come soon">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark"
-                   title="Code will come soon">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>arXiv</span>
                   </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Video will come soon">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" title="Code will come soon">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -162,16 +160,16 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- <section class="hero teaser">
+  <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -188,71 +186,102 @@
 </section> -->
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/pick.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/cloth.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/pill.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/book.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/bucket.mp4"
-                    type="video/mp4">
-          </video>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/pick.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/cloth.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/pill.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/book.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/bucket.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Enabling humanoid robots to perform long-horizon mobile manipulation planning in real-world environments based on embodied perception and comprehension abilities has been a longstanding challenge. 
-          </p>
-          <p>
-            With the recent rise of large language models (LLMs), there has been a notable increase in the development of LLM-based planners. These approaches either utilize human-provided textual representations of the real world or heavily depend on prompt engineering to extract such representations, lacking the capability to quantitatively understand the environment, such as determining the feasibility of manipulating objects.
-          </p>
-          <p>
-            To address these limitations, we present the Instruction-Augmented Long-Horizon Planning (IALP) system, a novel framework that employs LLMs to generate feasible and optimal actions based on real-time sensor feedback, including grounded knowledge of the environment, in a closed-loop interaction. Distinct from prior works, our approach augments user instructions into PDDL problems by leveraging both the abstract reasoning capabilities of LLMs and grounding mechanisms.
-            By conducting various real-world long-horizon tasks, each consisting of seven distinct manipulatory skills, our results demonstrate that the IALP system can efficiently solve these tasks with an average success rate exceeding 80%.
-            Our proposed method can operate as a high-level planner, equipping robots with substantial autonomy in unstructured environments through the utilization of multi-modal sensor inputs. 
-          </p>
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel2" class="carousel results-carousel2" data-slides-to-show="1" >
+          <div class="item item-steve">
+            <img class="carousel-image" src="./static/images/plans-box.png" alt="pick">
+          </div>
+          <div class="item item-chair-tp">
+            <img class="carousel-image" src="./static/images/plans-cloth.png" alt="cloth" >
+          </div>
+          <div class="item item-shiba">
+            <img class="carousel-image" src="./static/images/plans-drawer.png" alt="drawer" >
+          </div>
+          <div class="item item-fullbody">
+            <img class="carousel-image" src="./static/images/plans-book.png" alt="book">
+          </div>
+          <div class="item item-blueshirt">
+            <img class="carousel-image" src="./static/images/plans-bucket.png" alt="bucket">
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </section>
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Enabling humanoid robots to perform long-horizon mobile manipulation planning in real-world environments
+              based on embodied perception and comprehension abilities has been a longstanding challenge.
+            </p>
+            <p>
+              With the recent rise of large language models (LLMs), there has been a notable increase in the development
+              of LLM-based planners. These approaches either utilize human-provided textual representations of the real
+              world or heavily depend on prompt engineering to extract such representations, lacking the capability to
+              quantitatively understand the environment, such as determining the feasibility of manipulating objects.
+            </p>
+            <p>
+              To address these limitations, we present the Instruction-Augmented Long-Horizon Planning (IALP) system, a
+              novel framework that employs LLMs to generate feasible and optimal actions based on real-time sensor
+              feedback, including grounded knowledge of the environment, in a closed-loop interaction. Distinct from
+              prior works, our approach augments user instructions into PDDL problems by leveraging both the abstract
+              reasoning capabilities of LLMs and grounding mechanisms.
+              By conducting various real-world long-horizon tasks, each consisting of seven distinct manipulatory
+              skills, our results demonstrate that the IALP system can efficiently solve these tasks with an average
+              success rate exceeding 80%.
+              Our proposed method can operate as a high-level planner, equipping robots with substantial autonomy in
+              unstructured environments through the utilization of multi-modal sensor inputs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -262,32 +291,34 @@
       </div>
     </div>
   </div> -->
-</section>
+  </section>
 
- <!--Classical Task Planner-->
- <section class="section">
-  <div class="container is-max-widescreen">
+  <!--Classical Task Planner-->
+  <section class="section">
+    <div class="container is-max-widescreen">
       <div class="rows">
-          <div class="rows is-centered ">
-              <div class="row is-full-width">
-                  <h2 class="title is-3"><span class="dvima">Prompts used for LLM planner.</span></h2>
-                  <span style="font-size: 110%">
-                    Below lists comprehensive experimental details, including the design of actions, predicates, and the domain as described by PDDL. We also lists all the prompts utilized in our experiments, consisting of those for checking promptable predicates, generating PDDL problems, and serving as the LLM planner.
+        <div class="rows is-centered ">
+          <div class="row is-full-width">
+            <h2 class="title is-3"><span class="dvima">Prompts used for LLM planner.</span></h2>
+            <span style="font-size: 110%">
+              Below lists comprehensive experimental details, including the design of actions, predicates, and the
+              domain as described by PDDL. We also lists all the prompts utilized in our experiments, consisting of
+              those for checking promptable predicates, generating PDDL problems, and serving as the LLM planner.
 
-                  <!-- Inserted Tabs Start -->
-                  <div class="tabs">
-                      <ul>
-                          <li class="is-active"><a href="#pddl1">PDDL Action Definition</a></li>
-                          <li><a href="#pddl2">PDDL Domain Description</a></li>
-                          <li><a href="#pddl3">Prompts to generate goal</a></li>
-                          <li><a href="#pddl4">Prompts to generate observation</a></li>
-                          <li><a href="#pddl5">Prompt for planning</a></li>
-                      </ul>
-                  </div>
+              <!-- Inserted Tabs Start -->
+              <div class="tabs">
+                <ul>
+                  <li class="is-active"><a href="#pddl1">PDDL Action Definition</a></li>
+                  <li><a href="#pddl2">PDDL Domain Description</a></li>
+                  <li><a href="#pddl3">Prompts to generate goal</a></li>
+                  <li><a href="#pddl4">Prompts to generate observation</a></li>
+                  <li><a href="#pddl5">Prompt for planning</a></li>
+                </ul>
+              </div>
 
-                  <div class="tab-content">
-                      <div class="tab-pane active" id="pddl1">
-                          <pre><code class="scrollable-content">
+              <div class="tab-content">
+                <div class="tab-pane active" id="pddl1">
+                  <pre><code class="scrollable-content">
 (:action move ; move the robot to the object
 :parameters (?obj - locatable)
 :precondition (and
@@ -404,9 +435,9 @@
 )
 
 </code></pre>
-                      </div>
-                      <div class="tab-pane" id="pddl2">
-                          <pre><code>
+                </div>
+                <div class="tab-pane" id="pddl2">
+                  <pre><code>
 (define (domain room)
     (:requirements :strips :fluents :durative-actions :timed-initial-literals :typing :conditional-effects :negative-preconditions :duration-inequalities :equality :disjunctive-preconditions)
     (:types
@@ -435,9 +466,9 @@
     ; Actions
 )
                           </code></pre>
-                      </div>
-                      <div class="tab-pane" id="pddl3">
-                          <pre><code>
+                </div>
+                <div class="tab-pane" id="pddl3">
+                  <pre><code>
 Based on the instruction, you are using the following predicates to generate the goal of the PDDL problem. The robot's name is Tiago.
 
 Instruction: [INSTRUCTION]
@@ -460,10 +491,10 @@ Example finished.
 Here's what I give to you:
 Instruction: [INSTRUCTION]
                           </code></pre>
-                      </div>
-                      <div class="tab-pane" id="pddl4">
-                        <strong>Extract task-related objects in current task</strong> 
-                          <pre><code>
+                </div>
+                <div class="tab-pane" id="pddl4">
+                  <strong>Extract task-related objects in current task</strong>
+                  <pre><code>
 Please extract the object name and related object name from the given instruction. The related object name will help humans to find the object.  Also, extract other object names that may be related to finishing the instruction, such as the target position-related objects. You need to concatenate multi-word object names by using "_." For example, the "black table" in the instruction should be converted to "black_table." The answer should be in JSON format without markdown code block triple backticks:
 
 {
@@ -477,9 +508,9 @@ Please extract the object name and related object name from the given instructio
 
 The instruction: [INSTRUCTION]
                           </code></pre>
-<strong>Listing all possible predicates that are necessary to check the current state.</strong>
+                  <strong>Listing all possible predicates that are necessary to check the current state.</strong>
 
-<code><pre>
+                  <code><pre>
 You are required to detect the observation of the current environment by using the predicates and related objects provided below. You need to give all predicates and objects necessary to check the current state so that the robot can choose the best action. You don't need to verify each predicate. Every predicate can be used multiple times. Do NOT return markdown code block triple backticks.
 Instruction: [INSTRUCTION]
 The possible ?obj could be: [OBJECTS]
@@ -501,9 +532,9 @@ The output is formatted as:
 ...
 """
 </code></pre>
-                      </div>
-                      <div class="tab-pane" id="pddl5">
-                          <pre><code>
+                </div>
+                <div class="tab-pane" id="pddl5">
+                  <pre><code>
 {System Role}
 [user]
 You are an excellent interpreter of human instructions for daily tasks. Given an instruction and information about the working environment, you break it down into a sequence of robotic actions. Please do not begin working until I say "Start working." Instead, simply output the message "Waiting for next input." Understood?
@@ -559,53 +590,54 @@ The observation of the current environment is as follows:
 [OBSERVATION]
 """
                           </code></pre>
-                      </div>
+                </div>
 
-                      <!-- Inserted Tabs End -->
-                  </div>
+                <!-- Inserted Tabs End -->
               </div>
           </div>
+        </div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{fangyuan2024instruction,
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{fangyuan2024instruction,
   author    = {Fangyuan Wang, Shipeng Lyu, Peng Zhou, Anqing Duan, Guodong Guo, David Navarro-Alarcon},
   title     = {Instruction-Augmented Long-Horizon Planning: Embedding Grounding Mechanisms in Embodied Mobile Manipulation},
   journal   = {AAAI},
   year      = {2024},
 }</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="#">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="#" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8 has-text-centered">
-        <div class="content">
-          <p>
-            This website is borrowed from <a href="https://nerfies.github.io">Nerfies</a> and <a href="https://cowplanning.github.io/">Cowplanning</a>.
-          </p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="#">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="#" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8 has-text-centered">
+          <div class="content">
+            <p>
+              This website is borrowed from <a href="https://nerfies.github.io">Nerfies</a> and <a
+                href="https://cowplanning.github.io/">Cowplanning</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
